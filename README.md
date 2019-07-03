@@ -33,15 +33,17 @@ If you are working with multiple UI, just uncomments the code below, it will aut
 ### Note: The testUI() func is called from the init method of the PlaygroundViewController and not from the @override loadView() to avoid LiveView infinite loading loop.
 
 # Important
-**If you want to deal with a constant size in float points(like label font size or constraint position, you will need to transform the size you want to test with the pgFit function):**
+**If you want to deal with a constant size in float points(like label font size or constraint position), you will need to transform the size you want to test with the pgFit function:**
 ```
 viewExample.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: pgFit(float: -50)).isActive = true
 ```
 
-**When you need to import your code into your real project, just replace the pgFit function call with your Cgfloat value:**
+**When you need to import your code into your project, just replace the pgFit function call with your Cgfloat value:**
 ```
 viewExample.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -50).isActive = true
 ```
+
+# PlaygroundViewController
 
 
 

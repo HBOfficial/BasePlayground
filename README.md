@@ -1,5 +1,5 @@
-# BasePlayground
-Basic Playground Setup with all screen size. It's very usefull to test UI quickly with a basic file that already contains all screens size. You can clone or download the file in the repository or just copy and paste the code lines below in your own playground file.
+# BasicPlayground
+Basic Playground Setup with all screen size and type. The playground is working very well for testing quickly small label, button, and imageview, but when we are trying to simulate an entire view with an high resolution, some problems occuring with the aspect ratio, the width and the height of the playground simulation. As far as i know, it seems like the playground can't generate an high resolution view like if it was shrink to fit(But new Iphones and Ipads require it). This is why this playground is downscaling the real size and aspect ratio with something smaller. You can clone or download the file in the repository or just copy and paste the code lines below in your own playground file/project.
 
 # How it works
 To test your UI on a specific device, you just need to specify the device and the orientation you need in the testUI() func:
@@ -29,5 +29,8 @@ If you are working with multiple UI, just uncomments the code below, it will aut
          */ 
 ```
 
-### Note: The resolution is transform into logical resolution to fit with Apple's points system(@x1/@x2/@x3) and to avoid LiveView errors.
+### Note: The resolution is transform into logical resolution to fit with Apple's points system(@x2/@x3), and then is downscale to avoid LiveView errors.
 ### Note: The testUI() func is called from the init method of the PlaygroundViewController and not from the @override loadView() to avoid LiveView infinite loading loop.
+
+# Important
+
